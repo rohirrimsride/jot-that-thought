@@ -1,9 +1,11 @@
 const exp = require('constants');
 const express = require('express')
-const router = express.Router();
+
 
 const PORT = process.env.PORT || 3001;
 const app = express();
+const apiRoutes = require('./routes/apiRoutes/notesRoute');
+const htmlRoutes = require('./routes/htmlRoutes');
 
 app.use(express.static('public'));
 
