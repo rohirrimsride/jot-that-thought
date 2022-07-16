@@ -12,16 +12,25 @@ router.get('/notes', (req, res) => {
 });
 
 router.post('/notes', (req, res) => {
-    console.log(req);
+    req.body.id = (notes.length + 1).toString();
+
     if (!validateNotesTitle(req.body)) {
         res.status(400).send('Please add a note title');
     } else if (!validateNotesText(req.body)) {
         res.status(400).send('Please add text to this note');
     } else {
         const newNote = saveNotes(req.body, notes);
-        console.log(newNote);
+        
         res.json(newNote);
     }
+});
+
+router.delete('/notes/:id', (req, res) => {
+    console.log(req.params.id);
+    res.send({
+        message: "Note deleted", 
+        id: req.params.id
+    });
 });
 
 module.exports = router;
