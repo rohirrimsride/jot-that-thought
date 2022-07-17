@@ -1,6 +1,8 @@
+// Makes other resources or modules avialable in this file
 const router = require('express').Router();
 const { retrieveNotes, saveNotes, validateNotes, deleteNotes } = require('../../lib/notes');
 
+// GET api route logic
 router.get('/notes', (req, res) => {
     
     if (req) {
@@ -11,6 +13,7 @@ router.get('/notes', (req, res) => {
     }     
 });
 
+// POST api route logic
 router.post('/notes', (req, res) => {
     
 
@@ -23,7 +26,7 @@ router.post('/notes', (req, res) => {
     }
 });
 
-/
+// DELETE api route logic
 router.delete('/notes/:id', (req, res) => {
     
     if (req.params.id) {
