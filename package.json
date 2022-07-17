@@ -1,0 +1,23 @@
+{
+  "name": "jot-that-thought",
+  "version": "1.0.0",
+  "description": "App for note taking.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rohirrimsride/jot-that-thought.git"
+  },
+  "author": "rohirrimsride",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rohirrimsride/jot-that-thought/issues"
+  },
+  "homepage": "https://github.com/rohirrimsride/jot-that-thought#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
