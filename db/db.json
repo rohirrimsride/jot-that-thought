@@ -1,29 +1,27 @@
-{
-  "notes": [
-    {
-      "title": "Jot #1",
-      "text": "This is the first jotting of my thoughts!",
-      "id": "1"
-    },
-    {
-      "title": "Jot #2",
-      "text": "This is the second jotting of my thoughts!!",
-      "id": "2"
-    },
-    {
-      "title": "Jot #3",
-      "text": "Third jotting",
-      "id": "3"
-    },
-    {
-      "title": "Jot #4",
-      "text": "and the fourth.",
-      "id": "4"
-    },
-    {
-      "title": "Jot #5",
-      "text": "This is the best of the jots.",
-      "id": "5"
-    }
-  ]
-}
+[
+  {
+    "title": "note 1",
+    "text": "laskdjfklasjdf;lasjkdf",
+    "id": "0"
+  },
+  {
+    "title": "note 2",
+    "text": ";laksdfja;lsdkfj",
+    "id": "1"
+  },
+  {
+    "title": "note 3",
+    "text": "jiovpamerpofa",
+    "id": "2"
+  },
+  {
+    "title": "note 4",
+    "text": "iaosdpvawrog",
+    "id": "3"
+  },
+  {
+    "title": "note 5",
+    "text": "l;asdjkflasdjf;alsk",
+    "id": "4"
+  }
+]

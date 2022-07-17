@@ -1,36 +1,36 @@
-
 const router = require('express').Router();
-const { retrieveNotes, saveNotes, validateNotesTitle, validateNotesText } = require('../../lib/notes');
-const { notes } = require('../../db/db.json');
+const { retrieveNotes, saveNotes, validateNotes, deleteNotes } = require('../../lib/notes');
 
 router.get('/notes', (req, res) => {
-    let results = notes;
+    
     if (req) {
-        results = retrieveNotes(req, results);
-    }
-    res.json(results);
+        
+        let notesList = retrieveNotes(req);
+        
+        res.json(notesList);
+    }     
 });
 
 router.post('/notes', (req, res) => {
-    req.body.id = (notes.length + 1).toString();
+    
 
-    if (!validateNotesTitle(req.body)) {
-        res.status(400).send('Please add a note title');
-    } else if (!validateNotesText(req.body)) {
-        res.status(400).send('Please add text to this note');
+    if (!validateNotes(req.body)) {
+        res.status(400).send('There is a missing title or text.');
     } else {
-        const newNote = saveNotes(req.body, notes);
+        const newNote = saveNotes(req.body);
         
         res.json(newNote);
     }
 });
 
+/
 router.delete('/notes/:id', (req, res) => {
-    console.log(req.params.id);
-    res.send({
-        message: "Note deleted", 
-        id: req.params.id
-    });
+    
+    if (req.params.id) {
+        deleteNotes(req.params.id);
+        
+        res.json(`Note successfully deleted`);
+    }  
 });
 
 module.exports = router;
